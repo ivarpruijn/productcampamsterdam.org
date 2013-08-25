@@ -80,6 +80,7 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 define('WP_SITEURL', 'http://' . getenv('C9_PROJECT') . '.' . getenv('C9_USER') . '.c9.io');
+$_SERVER['HTTP_HOST'] = $_SERVER['SERVER_NAME'];
 
 /* That's all, stop editing! Happy blogging. */
 
