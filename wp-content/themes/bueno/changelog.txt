@@ -1,0 +1,92 @@
+*** Bueno Changelog ***
+
+2012.04.16 - version 1.7.4
+ * styles/default.css - Added #pagenav li.current-menu-item a
+ * styles/blue.css - Added #pagenav li.current-menu-item a
+ * styles/brown.css - Added #pagenav li.current-menu-item a
+ * styles/green.css - Added #pagenav li.current-menu-item a
+ * styles/grey.css - Added #pagenav li.current-menu-item a
+ * styles/purple.css - Added #pagenav li.current-menu-item a
+ * styles/red.css - Added #pagenav li.current-menu-item a
+
+2012.04.16 - version 1.7.3
+ * single.php - added previous and next links.
+ * style.css - styling for prev and next links.
+
+2011.05.09 - version 1.7.2
+ * page.php - fixed comments to show on pages.
+
+2011.03.31 - version 1.7.1
+ * archive.php - added Localization support for the "RSS feed for this section" string.
+ * lang/bueno.po - updated po file
+
+2011.03.02 - version 1.7
+ * header.php - added Google Font instead of Cufon
+ * style.css - added google font-family 'Anton'
+ * index.php, archive.php - added global $woo_options
+ * includes/theme-options.php - fixed options so $woo_options work.
+
+2011.02.14 - version 1.6
+ * index.php - Added support for adjusting excerpt vs. full-content
+ * archive.php - Added support for adjusting excerpt vs. full-content
+ * /includes/theme-options.php - Added support for adjusting excerpt vs. full-content (lines 109-113)
+
+2010.09.08 - version 1.5.1
+ * header.php - Added site-title to cufon replace
+
+2010.08.10 - version 1.5
+ * includes/theme-functions.php - removed yoast breadcrumbs plugin. Download here: http://yoast.com/wordpress/breadcrumbs/
+ * includes/theme-options.php - removed option for breadcrumbs. Install plugin to activate
+ * single.php - fixed yoast_breadcrumb (line 6)
+ * page.php - fixed yoast_breadcrumb (line 6)
+
+2010.06.21 - version 1.4.1
+ * style.css - Fixed Gravity forms styling bug
+
+2010.06.21 - version 1.4.0
+ * header.php - Added theme support for WordPress 3.0 Menu Management
+ * /includes/theme-functions.php - Added theme support for WordPress 3.0 Menu Management
+ 
+2010.06.15 - version 1.3.1
+ * style.css - Added styling for Gravity forms
+ * /styles/*.css  - Added styling for Gravity forms
+
+2010.05.26 - version 1.3
+ * includes/theme-options.php - added text title option
+ * style.css - added text title styling
+
+2010.05.12 - version 1.2.1
+ * comments.php - Fixed Trackbacks and Pingbacks
+ * /land/bueno.po - Adjust "Trackbacks/Pingbacks" to "Trackbacks and Pingbacks"
+
+2010.04.28 - version 1.2
+ * header.php - added support for WooNav
+ * search.php - sanitized search
+ 
+2010.04.07 - version 1.1
+ * /functions/* - MAJOR UPDATE - Framework V.2.7.0
+ * header.php - Added SEO tags, woo_title(); & woo_meta();
+ * functions.php - Changed layout for loading required files.
+
+2010.04.06 - version 1.0.5
+ * comments.php - Fixed translation bug.
+ * lang/bueno.po - Replaced PO file
+
+2009.12.08 - version 1.0.4
+ * /css/ie7.css - Fixed z-index bug for IE7
+
+2009.12.08 - version 1.0.3
+ * /css/ie6.css - Fixed z-index bug for IE6
+
+2009.11.25 - version 1.0.2
+ * style.css - Added hover style to category navigation
+ * includes/theme-widgets.php - Fixed margin below Featured Post widget
+
+2009.11.25 - version 1.0.1
+ * includes/theme-widgets.php - Fixed the single template bug in the featured post sidebar linking the image to it's source and not the relative post.	
+	
+2009.11.05 - version 1.0
+ * First release!	
+	
+2009.11.05 - version 1.0
+ * First release!
