@@ -1,0 +1,5 @@
+p#mc4wp-checkbox{ clear:both; display:block; }
+p#mc4wp-checkbox input{ margin:0 5px 0 0; display:inline-block !important; width:13px; height:13px; }
+p#mc4wp-checkbox label{ display:inline-block !important; }
+
+#registerform p#mc4wp-checkbox{ margin-bottom:10px; }

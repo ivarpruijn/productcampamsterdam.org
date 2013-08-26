@@ -1,0 +1,42 @@
+#mc4wp_admin hr{ margin:20px 0; background-color:lightGray; border:0; height:1px; }
+#mc4wp_admin h2{ padding-bottom: 0; }
+#mc4wp_admin span.status{ padding:3px; color:white; font-size:12px; }
+#mc4wp_admin span.status.connected{ background-color:green; }
+#mc4wp_admin span.status.not_connected{ background-color:lightGrey; }
+#mc4wp_admin td.desc{ font-style:italic; font-size:10px; }
+
+#mc4wp_admin .alert{ border:1px solid black; padding:5px; width:auto; }
+#mc4wp_admin .alert.warning{ background:#FCF8E3; color:#C09853; border:1px solid #FBEED5; }
+
+#mc4wp-nav { clear:both; padding:0; margin:20px 0; border-bottom: 1px solid lightGray; }
+#mc4wp-nav li { list-style: none; margin: 0; padding:0; display: inline-block; }
+#mc4wp-nav li a { font-weight:bold; display:block; padding: 6px 12px; margin:0 10px -1px 0; border:1px solid lightGray; text-decoration: none; font-size:14px; }
+#mc4wp-nav li a.active { background: white; border-bottom: 1px solid white; color:black; }
+
+#mc4wp-tabs .mc4wp-tab{ display:none !important; }
+#mc4wp-tabs .mc4wp-tab.active{ display:block !important; }
+
+#mc4wp_admin div.box{ padding:5px; }
+#mc4wp_admin div.box ul{ list-style:square; margin-left:25px; }
+#mc4wp_admin div.box li{ margin:0; }
+
+#mc4wp_admin div.donatebox{ border:2px solid green; background:#CFC; }
+#mc4wp_admin div.donatebox h3{ color:green; margin:0; }
+#mc4wp_admin div.donatebox li{ line-height:22px; }
+
+#mc4wp_ffd_fields { display:none; }
+#mc4wp_ffd_fields p label{  }
+#mc4wp_ffd_preview_field_code{ font-size:11px; }
+
+#mc4wp_admin table th{ text-align:left; }
+#mc4wp_admin table.form-table tr td:first-child, #mc4wp_admin table.form-table tr th:first-child{ padding-left:0; }
+
+#mc4wp_admin p.copyright-notice{ font-style:italic; }
+
+#mc4wp_admin .mc4wp-wrapper{ clear:both; width:100%; display:block; }
+#mc4wp_admin .mc4wp-col { float:left; margin:0 1%; padding:0;  }
+#mc4wp_admin .mc4wp-col-2-3{ width:64%; }
+#mc4wp_admin .mc4wp-col-1-3{ width:34%; }
+#mc4wp_admin .mc4wp-first{ margin-left:0; }
+#mc4wp_admin .mc4wp-last{ margin-right:0; }
+#mc4wp_admin .mc4wp-well{ background:#efefef; padding:10px; border:1px solid #666; }

@@ -1,0 +1,10 @@
+form.mc4wp-form{ clear:both; margin:15px 0; }
+form.mc4wp-form p{ clear:both; }
+form.mc4wp-form label{ display:block; font-weight:bold; }
+form.mc4wp-form input{ display:block; }
+form.mc4wp-form input[type=submit]{ }
+
+form.mc4wp-form p.mc4wp-alert{ padding: 10px 35px 10px 15px; color: #c09853; background-color: #fcf8e3; border: 1px solid #fbeed5; border-radius: 4px; display:block;  position:relative;}
+form.mc4wp-form p.mc4wp-success { color: #468847; background-color: #dff0d8; border-color: #d6e9c6; }
+form.mc4wp-form p.mc4wp-notice { color: #3a87ad; background-color: #d9edf7; border-color: #bce8f1; }
+form.mc4wp-form p.mc4wp-error { color: #b94a48; background-color: #f2dede; border-color: #eed3d7;; }
