@@ -1,0 +1,4 @@
+Name: Simplito
+Author: DesignDeck
+Webpage: http://www.designdeck.co.uk/
+Description: Circular like social icons, 64x64 maximum size.

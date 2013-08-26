@@ -1,0 +1,4 @@
+Name: Simple Icons (default)
+Author: Dan Leech
+Webpage: http://demos.danleech.com/simpleicons/
+Description: The default theme of Social Stickers.
