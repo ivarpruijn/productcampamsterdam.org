@@ -10,4 +10,50 @@ style from style.css to this file, and modify it to
 your liking.
 
 */
-
+form.mc4wp-form {
+    background: white;
+    padding: 10px 10px 10px 10px;
+    font: 14px Georgia, Times, Serif;
+    line-height: 1.5;
+    color: black;
+} /* the form element */
+form.mc4wp-form label {
+    float: left;
+    vertical-align: middle;
+    padding: 5px;
+} /* labels */
+form.mc4wp-form input {
+    float: left;
+    border: 1px solid red;
+    padding: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: white;
+    color: black;
+} /* input fields */
+form.mc4wp-form input[type=submit] {
+    float: left;
+    border: 1px solid red;
+    padding: 6px;
+    color: white;
+    background: red;
+} /* submit button */
+form.mc4wp-form div.clear {
+    clear: both;
+} /* submit button */
+form.mc4wp-form p.mc4wp-alert {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid red;
+    color: red;
+} /* success & error messages */
+form.mc4wp-form p.mc4wp-alert.mc4wp-success {
+    border: 1px dashed white;
+    color: white;
+    background: green;
+} /* success message */
+form.mc4wp-form p.mc4wp-alert.mc4wp-notice {
+    border: 1px dashed white;
+    color: white;
+    background: red;
+} /* error messages */
