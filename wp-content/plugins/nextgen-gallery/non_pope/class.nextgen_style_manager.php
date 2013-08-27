@@ -185,11 +185,13 @@ class C_NextGen_Style_Manager
 	{
 		if (!$selected) $selected = $this->get_selected_stylesheet();
 
-		return str_replace(
+		$retval =  str_replace(
 			trailingslashit(ABSPATH),
 			trailingslashit(site_url()),
 			$this->find_selected_stylesheet_abspath($selected)
 		);
+
+		return str_replace('\\', '/', $retval);
 	}
 
 

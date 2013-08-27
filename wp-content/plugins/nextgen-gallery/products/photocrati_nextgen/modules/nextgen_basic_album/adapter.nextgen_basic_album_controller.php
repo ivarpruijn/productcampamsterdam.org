@@ -150,32 +150,50 @@ class A_NextGen_Basic_Album_Controller extends Mixin
         $storage      = $this->object->get_registry()->get_utility('I_Gallery_Storage');
         $image_gen    = $this->object->get_registry()->get_utility('I_Dynamic_Thumbnails_Manager');
 
-        // legacy templates expect these dimensions
-        $image_gen_params       = array(
-            'width'             => 91,
-            'height'            => 68,
-            'crop'              => TRUE
-        );
+        if (!$displayed_gallery->display_settings['override_thumbnail_settings'])
+        {
+            // legacy templates expect these dimensions
+            $image_gen_params = array(
+                'width'  => 91,
+                'height' => 68,
+                'crop'   => TRUE
+            );
+        }
+        else {
+            // use settings requested by user
+            $image_gen_params = array(
+                'width'     => $displayed_gallery->display_settings['thumbnail_width'],
+                'height'    => $displayed_gallery->display_settings['thumbnail_height'],
+                'quality'   => $displayed_gallery->display_settings['thumbnail_quality'],
+                'crop'      => $displayed_gallery->display_settings['thumbnail_crop'],
+                'watermark' => $displayed_gallery->display_settings['thumbnail_watermark']
+            );
+        }
 
         // Transform entities
-        $params['galleries']    = $params['entities'];
+        $params['galleries'] = $params['entities'];
         unset($params['entities']);
+
         foreach ($params['galleries'] as &$gallery) {
 
             // Get the preview image url
-           $gallery->previewurl = '';
-            if ($gallery->previewpic && $gallery->previewpic > 0) {
-                if (($image = $image_mapper->find(intval($gallery->previewpic)))) {
-                    $gallery->previewurl    = $storage->get_image_url($image, $image_gen->get_size_name($image_gen_params));
-                    $gallery->previewname   = $gallery->name;
+            $gallery->previewurl = '';
+            if ($gallery->previewpic && $gallery->previewpic > 0)
+            {
+                if (($image = $image_mapper->find(intval($gallery->previewpic))))
+                {
+                    $gallery->previewurl = $storage->get_image_url($image, $image_gen->get_size_name($image_gen_params));
+                    $gallery->previewname = $gallery->name;
                 }
             }
 
             // Get the page link. If the entity is an album, then the url will
 			// look like /nggallery/album--slug.
             $id_field = $gallery->id_field;
-			if ($gallery->is_album) {
-                if ($gallery->pageid > 0) $gallery->pagelink = get_post_permalink($gallery->pageid);
+			if ($gallery->is_album)
+            {
+                if ($gallery->pageid > 0)
+                    $gallery->pagelink = get_post_permalink($gallery->pageid);
                 else {
                     $gallery->pagelink = $this->object->set_param_for(
                         $this->object->get_routed_url(TRUE),
@@ -188,7 +206,8 @@ class A_NextGen_Basic_Album_Controller extends Mixin
 			// Otherwise, if it's a gallery then it will look like
 			// /nggallery/album--slug/gallery--slug
 			else {
-                if ($gallery->pageid > 0) $gallery->pagelink = get_post_permalink($gallery->pageid);
+                if ($gallery->pageid > 0)
+                    $gallery->pagelink = get_post_permalink($gallery->pageid);
                 else {
                     $pagelink = $this->object->get_routed_url(TRUE);
                     $parent_album = $this->object->get_parent_album_for($gallery->$id_field);
@@ -201,7 +220,7 @@ class A_NextGen_Basic_Album_Controller extends Mixin
                     }
                     // Legacy compat: use an album slug of 'all' if we're missing a container_id
                     else if($displayed_gallery->container_ids === array('0')
-                        || $displayed_gallery->container_ids === array('')) {
+                         || $displayed_gallery->container_ids === array('')) {
                         $pagelink = $this->object->set_param_for($pagelink, 'album', 'all');
                     }
                     $gallery->pagelink = $this->object->set_param_for(
@@ -215,7 +234,8 @@ class A_NextGen_Basic_Album_Controller extends Mixin
 			// The router by default will generate param segments that look like,
 			// /gallery--foobar. We need to convert these to the admittingly
 			// nicer links that ngglegacy uses
-            if ($gallery->pageid <= 0) $gallery->pagelink = $this->object->prettify_pagelink($gallery->pagelink);
+            if ($gallery->pageid <= 0)
+                $gallery->pagelink = $this->object->prettify_pagelink($gallery->pagelink);
 
             // Let plugins modify the gallery
             $gallery = apply_filters('ngg_album_galleryobject', $gallery);

@@ -1,6 +1,18 @@
 NextGEN Gallery
 by Photocrati Media
 
+= V2.0.14 - 08.27.2013 =
+* NEW:     Added the ability to override thumbnail settings for NextGEN Basic Albums
+* NEW:     Shortcode Manager API, which ensures that shortcodes are outputted as intended
+* Changed: Re-added the ability to select the original image size for widgets
+* Fixed:   Ensure that stylesheet url returned is correct for Windows hosts
+* Fixed:   Broken links and lightbox effects with AJAX pagination
+* Fixed:   Try to ensure that third party plugins don't add content to our dynamic JS
+* Fixed:   Improved reliability of iframely.js
+* Fixed:   Ensure that urls are generated correctly in HTTPs environments
+* Fixed:   Datamapper works correctly in environments where temporary tables aren't supported
+* Fixed:   Fixed an issue with thickbox loading animation when home url differs from site url
+
 = V2.0.11 - 08.19.2013 =
 * NEW:     Added "run_ngg_resource_manager" hook to by-pass our resource manager
 * Changed: Removed "Reset & Uninstall" tab, for now

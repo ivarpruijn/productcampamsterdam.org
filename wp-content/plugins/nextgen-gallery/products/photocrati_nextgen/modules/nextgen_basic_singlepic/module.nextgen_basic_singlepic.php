@@ -17,7 +17,7 @@ class M_NextGen_Basic_Singlepic extends C_Base_Module
             NEXTGEN_BASIC_SINGLEPIC_MODULE_NAME,
             'NextGen Basic Singlepic',
             'Provides a singlepic gallery for NextGEN Gallery',
-            NEXTGEN_GALLERY_PLUGIN_VERSION,
+            '0.3',
             'http://www.photocrati.com',
             'Photocrati Media',
             'http://www.photocrati.com'
@@ -59,7 +59,7 @@ class M_NextGen_Basic_Singlepic extends C_Base_Module
 
 	function _register_hooks()
 	{
-		add_shortcode('singlepic',    array(&$this, 'render_singlepic'));
+		C_NextGen_Shortcode_Manager::add('singlepic',    array(&$this, 'render_singlepic'));
 	}
 
     /**

@@ -25,7 +25,7 @@ class M_NextGen_Basic_Gallery extends C_Base_Module
             'photocrati-nextgen_basic_gallery',
             'NextGEN Basic Gallery',
             "Provides NextGEN Gallery's basic thumbnail/slideshow integrated gallery",
-            NEXTGEN_GALLERY_PLUGIN_VERSION,
+            '0.3',
             'http://www.nextgen-gallery.com',
             'Photocrati Media',
             'http://www.photocrati.com'
@@ -121,13 +121,13 @@ class M_NextGen_Basic_Gallery extends C_Base_Module
     
     function _register_hooks()
 	{
-		add_shortcode('nggallery', array(&$this, 'render'));
-		add_shortcode('nggtags',   array(&$this, 'render_based_on_tags'));
-		add_shortcode('random',    array(&$this, 'render_random_images'));
-		add_shortcode('recent',    array(&$this, 'render_recent_images'));
-		add_shortcode('thumb',	   array(&$this, 'render_thumb_shortcode'));
-        add_shortcode('slideshow',		 array(&$this, 'render_slideshow'));
-		add_shortcode('nggslideshow',	 array(&$this, 'render_slideshow'));
+		C_NextGen_Shortcode_Manager::add('nggallery', array(&$this, 'render'));
+		C_NextGen_Shortcode_Manager::add('nggtags',   array(&$this, 'render_based_on_tags'));
+		C_NextGen_Shortcode_Manager::add('random',    array(&$this, 'render_random_images'));
+		C_NextGen_Shortcode_Manager::add('recent',    array(&$this, 'render_recent_images'));
+		C_NextGen_Shortcode_Manager::add('thumb',	   array(&$this, 'render_thumb_shortcode'));
+		C_NextGen_Shortcode_Manager::add('slideshow',		 array(&$this, 'render_slideshow'));
+		C_NextGen_Shortcode_Manager::add('nggslideshow',	 array(&$this, 'render_slideshow'));
 	}
 
     /**

@@ -17,7 +17,7 @@ class M_NextGen_Basic_Tagcloud extends C_Base_Module
 			NEXTGEN_BASIC_TAG_CLOUD_MODULE_NAME,
             'NextGen Basic Tagcloud',
             'Provides a tagcloud for NextGEN Gallery',
-            NEXTGEN_GALLERY_PLUGIN_VERSION,
+            '0.3',
             'http://www.photocrati.com',
             'Photocrati Media',
             'http://www.photocrati.com'
@@ -77,7 +77,7 @@ class M_NextGen_Basic_Tagcloud extends C_Base_Module
 
 	function _register_hooks()
 	{
-		add_shortcode('tagcloud', array(&$this, 'render_shortcode'));
+		C_NextGen_Shortcode_Manager::add('tagcloud', array(&$this, 'render_shortcode'));
 	}
 
     /**

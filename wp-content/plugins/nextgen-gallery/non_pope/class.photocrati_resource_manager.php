@@ -52,7 +52,7 @@ class C_Photocrati_Resource_Manager
 	 */
 	function start_buffer()
 	{
-		ob_start(array(&$this, 'output_buffer'));
+		ob_start(array(&$this, 'output_buffer_handler'));
 		ob_start(array(&$this, 'get_buffer'));
 	}
 
@@ -73,6 +73,12 @@ class C_Photocrati_Resource_Manager
 		}
 
 		$this->wrote_footer = TRUE;
+	}
+	
+	
+	function output_buffer_handler($content)
+	{
+		return $this->output_buffer();
 	}
 
 	/**

@@ -85,6 +85,10 @@ class A_WordPress_Router extends Mixin
             }
             $retval = $this->_home_url;
         }
+        
+    if ($this->object->is_https()) {
+    	$retval = preg_replace('/^http:\\/\\//i', 'https://', $retval, 1);
+    }
 
 		return $retval;
 	}
